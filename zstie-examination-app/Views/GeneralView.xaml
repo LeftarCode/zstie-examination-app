@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="ZSTIE.Views.GeneralView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:views="clr-namespace:ZSTIE.Views"
+             xmlns:viewmodels="clr-namespace:ZSTIE.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1200" Background="#FF252526">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
+            <views:LoginView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:RegisterViewModel}">
+            <views:RegisterView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:MenuViewModel}">
+            <views:MenuView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:NewExamViewModel}">
+            <views:NewExamView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:ExamViewModel}">
+            <views:ExamView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:ExamScoreViewModel}">
+            <views:ExamScoreView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:FinishedExamViewModel}">
+            <views:FinishedExamView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:ExamListViewModel}">
+            <views:ExamListView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:CreateExamViewModel}">
+            <views:CreateExamView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:VerificationCodeViewModel}">
+            <views:VerificationCodeView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:CreateQuestionViewModel}">
+            <views:CreateQuestionView/>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Image Source="/Resources/Images/user_icon.png" Width="20" Height="20" RenderOptions.BitmapScalingMode="HighQuality" Margin="140,5,0,0" HorizontalAlignment="Left">
+                <Image.Effect>
+                    <DropShadowEffect Direction="360" ShadowDepth="0" BlurRadius="10"/>
+                </Image.Effect>
+            </Image>
+            <Button Style="{StaticResource BlueNeonButtonStyle}" Content="Wstecz" Command="{Binding Backward}" Width="100" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Margin="20,0,0,0">
+                <Button.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                </Button.Effect>
+            </Button>
+            <Label Content="{Binding UserName}" Margin="165,0,0,0.4" HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="15" Foreground="#FF6888BA">
+                <Label.Effect>
+                    <DropShadowEffect ShadowDepth="0" Direction="360" BlurRadius="10" Color="#FF6888BA"/>
+                </Label.Effect>
+            </Label>
+            <Button Style="{StaticResource BlueNeonButtonStyle}" Content="Wyloguj" Command="{Binding GoLoginView}" Width="100" HorizontalAlignment="Right" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" Margin="0,0,10,0">
+                <Button.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+        <ContentControl Grid.Row="1" x:Name="CurrentContentControl" Content="{Binding CurrentViewModel}"/>
+    </Grid>
+</UserControl>

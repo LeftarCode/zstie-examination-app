@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ZSTIE.Styles">
+    <Style TargetType="{x:Type RadioButton}" x:Key="FinishedAnswerRadioButtonStyle">
+        <Setter Property="Background" Value="#FF007ACC" />
+        <Setter Property="BorderBrush" Value="#FF0064A6" />
+        <Setter Property="Foreground" Value="#FF6888BA" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding SelectedQuestion.CorrectAnswerIndex, Converter={StaticResource IntegerConverter}, ConverterParameter=0}" Value="True">
+                <Setter Property="Foreground" Value="#FF6CE679"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+</ResourceDictionary>

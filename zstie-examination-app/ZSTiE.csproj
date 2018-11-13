@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED739668-FEC5-4209-8022-176C978762A2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ZSTIE</RootNamespace>
+    <AssemblyName>ZSTiE</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Controls, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SDK.Expression.Blend.1.0.0\lib\net45\Microsoft.Expression.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SDK.Expression.Blend.1.0.0\lib\net45\Microsoft.Expression.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Effects, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SDK.Expression.Blend.1.0.0\lib\net45\Microsoft.Expression.Effects.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SDK.Expression.Blend.1.0.0\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SDK.Expression.Blend.1.0.0\lib\net45\Microsoft.Expression.Prototyping.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Prototyping.SketchControls, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SDK.Expression.Blend.1.0.0\lib\net45\Microsoft.Expression.Prototyping.SketchControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SDK.Expression.Blend, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SDK.Expression.Blend.1.0.0\lib\net45\Microsoft.SDK.Expression.Blend.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.2.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.2.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp.Serializers.Newtonsoft.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.Newtonsoft.Json.1.4.0\lib\net452\RestSharp.Serializers.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SDK.Expression.Blend.1.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Managers\ExamManager.cs" />
+    <Compile Include="Managers\NewExamManager.cs" />
+    <Compile Include="Managers\QualificationManager.cs" />
+    <Compile Include="Managers\UserManager.cs" />
+    <Compile Include="Models\DTO\CreateQuestionDTO.cs" />
+    <Compile Include="Models\DTO\RegisterUserDTO.cs" />
+    <Compile Include="Models\DTO\SubmitExamDTO.cs" />
+    <Compile Include="Models\Response\ClassSimpleModel.cs" />
+    <Compile Include="Models\Response\ExamListItemModel.cs" />
+    <Compile Include="Models\Response\ExamModel.cs" />
+    <Compile Include="Models\Response\ExamScore.cs" />
+    <Compile Include="Models\Response\ExamUltraSimpleModel.cs" />
+    <Compile Include="Models\Response\FinishedExamModel.cs" />
+    <Compile Include="Models\Response\FinishedExamQuestionModel.cs" />
+    <Compile Include="Models\Response\QualificationModel.cs" />
+    <Compile Include="Models\Response\QuestionModel.cs" />
+    <Compile Include="Models\Response\UserSimpleModel.cs" />
+    <Compile Include="Models\Response\VerificationCodeSimpleModel.cs" />
+    <Compile Include="REST\Error.cs" />
+    <Compile Include="Models\DTO\LoginUserDTO.cs" />
+    <Compile Include="Models\Response\LoginResponse.cs" />
+    <Compile Include="REST\Response.cs" />
+    <Compile Include="REST\ResponseHelper.cs" />
+    <Compile Include="REST\RestClient.cs" />
+    <Compile Include="Utilities\IntegerToBooleanConverter.cs" />
+    <Compile Include="Utilities\PasswordBoxAssistant.cs" />
+    <Compile Include="Utilities\RelayCommand.cs" />
+    <Compile Include="Utilities\SelectionChangedBehaviour.cs" />
+    <Compile Include="ViewModels\CreateQuestionViewModel.cs" />
+    <Compile Include="ViewModels\VerificationCodeViewModel.cs" />
+    <Compile Include="ViewModels\CreateExamViewModel.cs" />
+    <Compile Include="ViewModels\ExamListViewModel.cs" />
+    <Compile Include="ViewModels\ExamScoreViewModel.cs" />
+    <Compile Include="ViewModels\ExamViewModel.cs" />
+    <Compile Include="ViewModels\FinishedExamViewModel.cs" />
+    <Compile Include="ViewModels\GeneralViewModel.cs" />
+    <Compile Include="ViewModels\ListItems\ExamListItemViewModel.cs" />
+    <Compile Include="ViewModels\ListItems\ExamQuestionListItemViewModel.cs" />
+    <Compile Include="ViewModels\ListItems\FinishedExamQuestionListItemViewModel.cs" />
+    <Compile Include="ViewModels\ListItems\UserListItemViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\MessageViewModel.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyChangeView.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyExamSelected.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyLoginSuccess.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyGoLoginView.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyMessageViewHide.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyProgressBarVisibility.cs" />
+    <Compile Include="ViewModels\ListItems\QualificationListViewModel.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyQualificationImageLoaded.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyQualificationSelected.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyQuestionSelected.cs" />
+    <Compile Include="ViewModels\Notifiers\INotifyRegisterClick.cs" />
+    <Compile Include="ViewModels\NewExamViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\CircularProgressBar.xaml.cs">
+      <DependentUpon>CircularProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateQuestionView.xaml.cs">
+      <DependentUpon>CreateQuestionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExamListView.xaml.cs">
+      <DependentUpon>ExamListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExamScoreView.xaml.cs">
+      <DependentUpon>ExamScoreView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VerificationCodeView.xaml.cs">
+      <DependentUpon>VerificationCodeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExamView.xaml.cs">
+      <DependentUpon>ExamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FinishedExamView.xaml.cs">
+      <DependentUpon>FinishedExamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GeneralView.xaml.cs">
+      <DependentUpon>GeneralView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListItems\UserListItemView.xaml.cs">
+      <DependentUpon>UserListItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListItems\ExamListItemView.xaml.cs">
+      <DependentUpon>ExamListItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListItems\ExamQuestionListItemView.xaml.cs">
+      <DependentUpon>ExamQuestionListItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListItems\QualificationItemListView.xaml.cs">
+      <DependentUpon>QualificationItemListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageView.xaml.cs">
+      <DependentUpon>MessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateExamView.xaml.cs">
+      <DependentUpon>CreateExamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewExamView.xaml.cs">
+      <DependentUpon>NewExamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterView.xaml.cs">
+      <DependentUpon>RegisterView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Strings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\AnswerRadioButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\BlueNeonButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\FinishedAnswerRadioButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\QuestionButtonListItemStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CircularProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateQuestionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ExamListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ExamScoreView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\VerificationCodeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ExamView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FinishedExamView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GeneralView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListItems\UserListItemView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListItems\ExamListItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListItems\ExamQuestionListItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListItems\QualificationItemListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MessageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MenuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateExamView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NewExamView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RegisterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\zstie_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\new_exam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\exam_results.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\settings.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\add_question.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\qualification.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\not-ok.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

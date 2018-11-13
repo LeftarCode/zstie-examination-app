@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="ZSTIE.Views.MessageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZSTIE.Views"
+             xmlns:viewmodels="clr-namespace:ZSTIE.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1200">
+    <UserControl.DataContext>
+        <viewmodels:MessageViewModel/>
+    </UserControl.DataContext>
+    <Grid x:Name="MainGrid" Background="#BF252526">
+        <Grid Width="500" Height="200" Background="#FF252526">
+            <Grid.Effect>
+                <DropShadowEffect Direction="0" BlurRadius="25" ShadowDepth="0" Color="#FF82AFCE" Opacity="0.5"/>
+            </Grid.Effect>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="{Binding Title}" Background="#FF007ACC" Foreground="#FFECF0F1" Margin="0"></Label>
+            <TextBox Grid.Row="1" BorderThickness="0" TextWrapping="WrapWithOverflow" Text="{Binding Content}" Foreground="#FF6888BA" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Margin="10,10,10,20"></TextBox>
+            <Grid Grid.Row="2">
+                <Button Style="{StaticResource BlueNeonButtonStyle}" Width="99" Content="OK" Command="{Binding CloseCommand}" HorizontalAlignment="Right" Margin="0,0,5,5" HorizontalContentAlignment="Center">
+                    <Button.Effect>
+                        <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                    </Button.Effect>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

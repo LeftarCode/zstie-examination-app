@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="ZSTIE.Views.VerificationCodeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZSTIE.Views"
+             xmlns:listitems="clr-namespace:ZSTIE.Views.ListItems"
+             xmlns:viewmodels="clr-namespace:ZSTIE.ViewModels"
+             xmlns:listitemsviewmodels="clr-namespace:ZSTIE.ViewModels.ListItems"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:converters="clr-namespace:ZSTIE.Utilities"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1200" Background="#FF252526">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Loaded}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="UsernameTextBox" Text="{Binding Path=ClassName, Mode=TwoWay}" Height="30" Margin="0,100,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" FontSize="20" Width="500" Background="#FF2D2D30" Foreground="#FF6888BA" SelectionBrush="#FF1C2D3A" BorderBrush="#FF6888BA">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="#FF6888BA" Direction="0" ShadowDepth="0" BlurRadius="10"/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Nazwa klasy:" Margin="0,74,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Width="497" Foreground="#FF6888BA">
+                <Label.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                </Label.Effect>
+            </Label>
+            <TextBox x:Name="CountTextBox" Text="{Binding Path=Count, Mode=TwoWay}" Height="30" Margin="0,160,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" FontSize="20" Width="500" Background="#FF2D2D30" Foreground="#FF6888BA" SelectionBrush="#FF1C2D3A" BorderBrush="#FF6888BA">
+                <TextBox.Effect>
+                    <DropShadowEffect Color="#FF6888BA" Direction="0" ShadowDepth="0" BlurRadius="10"/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Ilość:" Margin="0,134,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Width="497" Foreground="#FF6888BA">
+                <Label.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                </Label.Effect>
+            </Label>
+            <Button Style="{StaticResource BlueNeonButtonStyle}" Content="Generuj kody" Margin="0,200,0,0" VerticalAlignment="Top" Width="500" HorizontalContentAlignment="Center" Height="40" BorderBrush="#FF6888BA" Command="{Binding GenerateCodes}">
+                <Button.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="ZSTIE.Views.CreateExamView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:u="clr-namespace:ZSTIE.Utilities"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZSTIE.Views"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:listitems="clr-namespace:ZSTIE.Views.ListItems"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1200" Background="#FF252526">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding Loaded}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Row="2" ItemsSource="{Binding UsersList}" SelectionMode="Multiple" SelectedIndex="{Binding SelectedIndex}" Background="#FF252526" BorderBrush="#FF252526" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <listitems:UserListItemView/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="IsSelected" Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <ComboBox Grid.Row="1" u:SelectionChangedBehaviour.Command="{Binding OnClassChanged}" Margin="0" VerticalAlignment="Top" Width="1200" Height="24" ItemsSource="{Binding ClassesList}" SelectedItem="{Binding ClassName, Mode=TwoWay}" HorizontalContentAlignment="Stretch" Foreground="#FFACACAC" Background="#FF252526" BorderBrush="#FF252526">
+        </ComboBox>
+        <ComboBox Grid.Row="0" u:SelectionChangedBehaviour.Command="{Binding OnQualificationChanged}" Margin="0" VerticalAlignment="Top" Width="1200" Height="24" ItemsSource="{Binding QualifsList}" SelectedItem="{Binding QualifName, Mode=TwoWay}" HorizontalContentAlignment="Stretch" Foreground="#FFACACAC" Background="#FF252526" BorderBrush="#FF252526">
+        </ComboBox>
+        <Button Grid.Row="3" Style="{StaticResource BlueNeonButtonStyle}" Content="Wystaw!" VerticalAlignment="Top" Width="500" HorizontalContentAlignment="Center" Height="40" BorderBrush="#FF6888BA" Command="{Binding OnSubmitExam}">
+            <Button.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="ZSTIE.Views.ExamScoreView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZSTIE.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1200" Background="#FF252526">
+    <Grid>
+        <Label Content="{Binding ScoreLabel}" Foreground="#FF6888BA" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0" FontSize="36">
+            <Label.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+            </Label.Effect>
+        </Label>
+        <Image Visibility="{Binding PassImageVisibility}" Source="/Resources/Images/ok.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Margin="0,13,0,0">
+            <Image.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6CE679" BlurRadius="25"/>
+            </Image.Effect>
+        </Image>
+        <Image Visibility="{Binding FailImageVisibility}" Source="/Resources/Images/not-ok.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Margin="450,0">
+            <Image.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FFFF3B3B" BlurRadius="25"/>
+            </Image.Effect>
+        </Image>
+        <Button Command="{Binding ShowExam}" Style="{StaticResource BlueNeonButtonStyle}" Content="Zobacz egzamin" Width="500" Height="40" BorderBrush="#FF6888BA" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,75">
+            <Button.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</UserControl>

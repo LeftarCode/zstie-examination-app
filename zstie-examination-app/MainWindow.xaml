@@ -1,0 +1,33 @@
+﻿<Window x:Class="ZSTIE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZSTIE"
+        xmlns:views="clr-namespace:ZSTIE.Views"
+        xmlns:viewmodels="clr-namespace:ZSTIE.ViewModels"
+        mc:Ignorable="d"
+        Title="ZSTiE - Kwalifikacyjne egzaminy zawodowe" MinHeight="600" Height="600" MinWidth="1100" Width="1200" Background="#FF252526">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:GeneralViewModel}">
+            <views:GeneralView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
+            <views:LoginView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:RegisterViewModel}">
+            <views:RegisterView/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ContentControl x:Name="MainContentControl" Content="{Binding SelectedViewModel}">
+            <ContentControl.Effect>
+                <BlurEffect Radius="{Binding ContentBlurRadius}"/>
+            </ContentControl.Effect>
+        </ContentControl>
+        <views:MessageView x:Name="MessageView" Visibility="Hidden"/>
+        <views:CircularProgressBar x:Name="ProgressBar" Visibility="Hidden"/>
+    </Grid>
+        
+</Window>

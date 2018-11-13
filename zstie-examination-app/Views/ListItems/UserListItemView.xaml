@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="ZSTIE.Views.ListItems.UserListItemView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZSTIE.Views.ListItems"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="300">
+    <Grid>
+        <Label Content="{Binding Name}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Foreground="White"/>
+    </Grid>
+</UserControl>

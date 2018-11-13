@@ -1,0 +1,239 @@
+﻿<UserControl x:Class="ZSTIE.Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZSTIE.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1200" Background="#FF252526">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0" Grid.Row="0" Command="{Binding SelectQualification}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="10">
+            <Grid>
+                <Image Source="/Resources/Images/new_exam.jpg" Stretch="UniformToFill" Opacity="0.5">
+                    <Image.Effect>
+                        <BlurEffect Radius="25"/>
+                    </Image.Effect>
+                </Image>
+                <Label Content="NOWY EGZAMIN" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Background="#33ECF0F1" FontSize="15"/>
+            </Grid>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FF252526"/>
+                    <Setter Property="Foreground" Value="#FF6888BA"/>
+                    <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#FF789CD6"/>
+                            <Setter Property="Background" Value="#FF353535"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#FF252526"/>
+                            <Setter Property="Foreground" Value="#FF6888BA"/>
+                            <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+            </Button.Effect>
+        </Button>
+        <Button Command="{Binding SelectExamList}" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="10">
+            <Grid>
+                <Image Source="/Resources/Images/exam_results.jpg" Stretch="UniformToFill" Opacity="0.5">
+                    <Image.Effect>
+                        <BlurEffect Radius="25"/>
+                    </Image.Effect>
+                </Image>
+                <Label Content="WYNIKI EGZAMINÓW" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Background="#33ECF0F1" FontSize="15"/>
+            </Grid>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FF252526"/>
+                    <Setter Property="Foreground" Value="#FF6888BA"/>
+                    <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#FF789CD6"/>
+                            <Setter Property="Background" Value="#FF353535"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#FF252526"/>
+                            <Setter Property="Foreground" Value="#FF6888BA"/>
+                            <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+            </Button.Effect>
+        </Button>
+        <Grid x:Name="AdminGridLabel" Grid.Row="1" Grid.ColumnSpan="3" Background="#FF007ACC" >
+            <Label Content="ADMIN" Foreground="#FFECF0F1" Margin="10,0">
+                <Label.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                </Label.Effect>
+            </Label>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0" Grid.Row="0" Margin="10" Command="{Binding OnCreateQuestionClick}">
+                <Grid>
+                    <Image Source="/Resources/Images/add_question.jpg" Stretch="UniformToFill" Opacity="0.5">
+                        <Image.Effect>
+                            <BlurEffect Radius="25"/>
+                        </Image.Effect>
+                    </Image>
+                    <Label Content="DODAJ PYTANIA" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Background="#33ECF0F1" FontSize="15"/>
+                </Grid>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF252526"/>
+                        <Setter Property="Foreground" Value="#FF6888BA"/>
+                        <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="#FF789CD6"/>
+                                <Setter Property="Background" Value="#FF353535"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF252526"/>
+                                <Setter Property="Foreground" Value="#FF6888BA"/>
+                                <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                </Button.Effect>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="0" Margin="10" Command="{Binding OnCreateExamClick}">
+                <Grid>
+                    <Image Source="/Resources/Images/add_question.jpg" Stretch="UniformToFill" Opacity="0.5">
+                        <Image.Effect>
+                            <BlurEffect Radius="25"/>
+                        </Image.Effect>
+                    </Image>
+                    <Label Content="WYSTAW EGZAMIN" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Background="#33ECF0F1" FontSize="15"/>
+                </Grid>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF252526"/>
+                        <Setter Property="Foreground" Value="#FF6888BA"/>
+                        <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="#FF789CD6"/>
+                                <Setter Property="Background" Value="#FF353535"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF252526"/>
+                                <Setter Property="Foreground" Value="#FF6888BA"/>
+                                <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                </Button.Effect>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="0" Margin="10" Command="{Binding OnGenerateCodeClick}">
+                <Grid>
+                    <Image Source="/Resources/Images/add_question.jpg" Stretch="UniformToFill" Opacity="0.5">
+                        <Image.Effect>
+                            <BlurEffect Radius="25"/>
+                        </Image.Effect>
+                    </Image>
+                    <Label Content="KODY WERYFIKACYJNE" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Background="#33ECF0F1" FontSize="15"/>
+                </Grid>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF252526"/>
+                        <Setter Property="Foreground" Value="#FF6888BA"/>
+                        <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="#FF789CD6"/>
+                                <Setter Property="Background" Value="#FF353535"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF252526"/>
+                                <Setter Property="Foreground" Value="#FF6888BA"/>
+                                <Setter Property="BorderBrush" Value="#FF6888BA"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

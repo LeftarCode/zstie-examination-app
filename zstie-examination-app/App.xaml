@@ -1,0 +1,18 @@
+﻿<Application x:Class="ZSTIE.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ZSTIE"
+             xmlns:converters="clr-namespace:ZSTIE.Utilities"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <converters:IntegerToBooleanConverter x:Key="IntegerConverter"/>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/QuestionButtonListItemStyle.xaml" />
+                <ResourceDictionary Source="Styles/BlueNeonButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/FinishedAnswerRadioButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/QuestionButtonListItemStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
