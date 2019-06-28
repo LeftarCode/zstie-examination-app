@@ -64,10 +64,10 @@ namespace ZSTIE.ViewModels
 
         void LoadedExecute()
         {
+            exams.Clear();
             NotifyProgressBarVisibility.ShowProgressBar();
             try
             {
-                exams.Clear();
                 Response<List<ExamListItemModel>> response = examManager.GetUserExams();
                 OnGetUserExamResponse(response);
             }

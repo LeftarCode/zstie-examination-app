@@ -104,7 +104,7 @@ namespace ZSTIE.ViewModels.ListItems
 
             Picture = new BitmapImage();
 
-            if( PictureUrl != null )
+            if( !string.IsNullOrEmpty(PictureUrl) )
             {
                 Picture.BeginInit();
                 Picture.UriSource = new Uri(PictureUrl);

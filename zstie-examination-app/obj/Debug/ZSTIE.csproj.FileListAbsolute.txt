@@ -29,7 +29,6 @@ E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zst
 E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\obj\Debug\ZSTIE.csproj.CoreCompileInputs.cache
 E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\obj\Debug\ZSTiE.exe
 E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\obj\Debug\ZSTiE.pdb
-E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\obj\Debug\ZSTiE.csprojResolveAssemblyReference.cache
 E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\bin\Debug\Microsoft.Expression.Controls.dll
 E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\bin\Debug\Microsoft.Expression.Drawing.dll
 E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\bin\Debug\Microsoft.Expression.Effects.dll
@@ -70,3 +69,5 @@ E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zst
 E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\obj\Debug\Views\VerificationCodeView.baml
 E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\obj\Debug\Views\CreateQuestionView.g.cs
 E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\obj\Debug\Views\CreateQuestionView.baml
+E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\obj\Debug\ZSTiE.csprojAssemblyReference.cache
+E:\ZSTIE\Aplikacja egzaminacyjna\zstie-examination-app\zstie-examination-app\zstie-examination-app\obj\Debug\ZSTiE.csproj.CopyComplete

@@ -76,7 +76,7 @@
                 <DropShadowEffect Color="#FF6888BA" Direction="0" ShadowDepth="0" BlurRadius="10"/>
             </PasswordBox.Effect>
         </PasswordBox>
-        <Label Content="Email:" Margin="0,399,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Width="497" Foreground="#FF6888BA">
+        <Label Content="Kod weryfikacyjny:" Margin="0,399,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" Width="497" Foreground="#FF6888BA">
             <Label.Effect>
                 <DropShadowEffect Direction="0" ShadowDepth="0" Color="#FF6888BA"/>
             </Label.Effect>
