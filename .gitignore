@@ -1,2 +1,8 @@
 zstie-examination-app/obj
 zstie-examination-app/bin
+zstie-examination-app/obj/*
+zstie-examination-app/bin/*
+.vs
+.vs/*
+packages
+packages/*
